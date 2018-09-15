@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative "../lib/game.rb"
+
+
+loop do
+  game = TicTacToe::Game.new
+  game.play
+  puts "Would you like to play again? (y/N)"
+  play_again = gets.chomp
+  unless play_again =~ /^y/i
+    break
+  end
+end
